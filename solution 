@@ -1,0 +1,16 @@
+
+class Anagram
+
+  attr_accessor :name
+
+  def initialize(word)
+    @name = word 
+  end   
+#takes an array of possible anagrams
+   def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end   
+end 
+  #select returns a new object (e.g. array) filled with only those original items where the block you gave it returned true
+  
+  #Basically the purpose of this is shown in line 10 - 11  is that it will select the array/word and iterate over it by splitting the word and sorting the letters and if the letters are equivalent to the letter in the @name it is true and will match. 
